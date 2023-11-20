@@ -1,20 +1,23 @@
 import hr
+import employees
+import productivity
 
-salary_employee = hr.SalaryEmployee(1, "Fariz", 1500)
-hourly_employee = hr.HourlyEmployee(1, "Nizko", 40, 15)
-commission_employee = hr.CommissionEmployee(4.5, "Dima", 820, 220)
+manager = employees.Manager(1, "Fariz", 1500)
+secretary = employees.Secretary(1, "Nizko", 1200)
+sales_guy = employees.SalesPerson(4.5, "Dima", 820, 220)
+factory_worker = employees.FactoryWorker(4, "Jordan", 30, 18)
 
-
-payroll_system  = hr.PayrollSystem()
-payroll_system.calculate_payroll(
-    [
-        salary_employee,
-        hourly_employee,
-        commission_employee
-
+employees = [
+    manager,
+    secretary,
+    sales_guy,
+    factory_worker
     ]
 
-)
+productivity_system = productivity.ProductivitySystem()
+productivity_system.track(employees, 40)
+payroll_system = hr.PayrollSystem()
+payroll_system.calculate_payroll(employees)
 
 
 # Calculating Payroll
@@ -22,8 +25,8 @@ payroll_system.calculate_payroll(
 # Payroll for: 1 - Fariz
 # -Chech Amount: 1500
 # Payroll for: 1 - Nizko
-# -Chech Amount: 600
+# -Chech Amount: 1200
 # Payroll for: 4.5 - Dima
 # -Chech Amount: 1040
-
-# Process finished with exit code 0
+# Payroll for: 4 - Jordan
+# -Chech Amount: 540
