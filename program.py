@@ -15,3 +15,15 @@ payroll_system.calculate_payroll(
     ]
 
 )
+
+
+# Calculating Payroll
+# --------------------
+# Payroll for: 1 - Fariz
+# -Chech Amount: 1500
+# Payroll for: 1 - Nizko
+# -Chech Amount: 600
+# Payroll for: 4.5 - Dima
+# -Chech Amount: 1040
+
+# Process finished with exit code 0
